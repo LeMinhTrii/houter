@@ -1,0 +1,84 @@
+// css img, button, heading, title, input, elements, components...
+img {
+    max-width: 100%;
+    height: auto;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    &.--center {
+        margin: 0 auto;
+        display: block;
+    }
+}
+
+a {
+    text-decoration: none;
+}
+
+// colors (tuỳ chỉnh)
+.--white-cl {
+    color: $white-cl;
+}
+
+.--black-cl {
+    color: $black-cl;
+}
+
+.--blue-cl {
+    color: $blue-cl;
+}
+
+// css article (nội dung chi tiết bài viết)
+.heading-cpn {
+    &.ct {
+        text-align: center;
+        .minitext {
+            display: inline-block;
+            &::before {
+                top: -10px;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+    }
+    .minitext {
+        position: relative;
+        &::before {
+            position: absolute;
+            content: "";
+            background: #f59f0b7d;
+            top: 50%;
+            transform: translateY(-50%);
+            left: -35px;
+            width: 25px;
+            height: 2px;
+        }
+        color: #f59e0b;
+        font-family: lm;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        text-transform: capitalize;
+    }
+    .title {
+        margin-top: 7px;
+        color: #1b1c57;
+        font-family: ls;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        text-transform: capitalize;
+    }
+    @media (max-width: $xs-max) {
+        // Mobile
+        .minitext {
+            &::before {
+                display: none;
+            }
+        }
+    }
+}

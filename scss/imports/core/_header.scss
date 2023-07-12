@@ -1,0 +1,82 @@
+// css header
+.header {
+    position: relative;
+    &_content {
+        position: relative;
+        z-index: 1;
+        padding-top: 46px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        &-nav {
+            display: flex;
+            gap: 56px;
+            align-items: center;
+            ul {
+                display: flex;
+                gap: 24px;
+                li {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border: 1px solid rgba(255, 255, 255, 0.3);
+                    border-radius: 32px;
+                    background: rgba(255, 255, 255, 0.1);
+                    a {
+                        box-sizing: border-box;
+                        padding: 4px 16px;
+                        color: #f0f3fd;
+                        font-family: ls;
+                        font-size: 14px;
+                    }
+                    img {
+                        display: inline-block;
+                        padding-right: 15px;
+                        margin-left: -10px;
+                    }
+                }
+            }
+            .btn-signup {
+                color: #047857;
+                font-size: 14px;
+                font-family: ls;
+                line-height: 22px;
+                padding: 12px 24px;
+                background: #d1fae5;
+                border-radius: 32px;
+                cursor: pointer;
+            }
+        }
+    }
+    &_blur {
+        img {
+            position: absolute;
+            z-index: -1;
+            &.blurone {
+                top: 0;
+                left: -173px;
+            }
+            &.blurtwo {
+                top: 0;
+                left: 74px;
+            }
+        }
+    }
+    @media (max-width: $sm-max) {
+        // Tablet
+    }
+    @media (max-width: $xs-max) {
+        // Mobile
+        background: #10b981;
+        &_content {
+            height: 70px;
+            padding-top: inherit;
+            &-nav {
+                display: none;
+            }
+        }
+        &_blur {
+            display: none;
+        }
+    }
+}

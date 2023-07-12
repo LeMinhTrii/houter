@@ -1,0 +1,28 @@
+// css library
+.flickity-button.flickity-prev-next-button.next {
+    top: -30px;
+    right: 170px;
+    opacity: 0;
+}
+
+.flickity-button.flickity-prev-next-button.previous {
+    top: -30px;
+    right: 240px;
+    left: inherit;
+    opacity: 0;
+}
+
+.featured .flickity-viewport {
+    height: 420px !important;
+    @media (max-width: $xs-max) {
+        // Mobile
+        height: 512px !important;
+    }
+}
+
+.about_content .flickity-viewport {
+    @media (max-width: $xs-max) {
+        // Mobile
+        height: 530px !important;
+    }
+}
